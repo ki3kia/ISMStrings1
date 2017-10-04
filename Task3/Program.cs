@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrMethods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,8 @@ namespace Task3
             string s;
             Console.WriteLine("Введите строку");
             s = Console.ReadLine();
-            Regex reg = new Regex(@"\b([01]\d:[0-5]\d|2[0-3]:[0-5]\d)\b");
-            Match m = reg.Match(s);
+            //first task
+            Reg.CorrectTime(s, out Match m);
             while (m.Success)
             {
                 if (m.Success)
@@ -25,8 +26,7 @@ namespace Task3
                 m = m.NextMatch();
             }
             //sekond task
-            Regex r = new Regex(@"\b(0[1-9]\.0\d\.19\d{2}|[12]\d\.0\d\.19\d{2}|3[01]\.0\d\.19\d{2}|0[1-9]\.\d\.200\d|[12]\d\.0\d\.200\d|3[01]\.0\d\.200\d|0[1-9]\.1[0-2]\.19\d{2}|[12]\d\.1[0-2]\.19\d{2}|3[01]\.1[0-2]\.19\d{2}|0[1-9]\.1[0-2]\.200\d|[12]\d\.1[0-2]\.200\d|3[01]\.1[0-2]\.200\d)\b");
-            Match mat = r.Match(s);
+            Reg.DateInterval(s, out Match mat, out Match match);
             while (mat.Success)
             {
                 if (mat.Success)
@@ -35,8 +35,6 @@ namespace Task3
                 }
                 mat = mat.NextMatch();
             }
-            Regex regex = new Regex(@"\b(198[4-9]|199\d|20[01]\d|202[0-5])\b");
-            Match match = regex.Match(s);
             while (match.Success)
             {
                 if (match.Success)
