@@ -80,11 +80,11 @@ namespace ISMStr_Form
             label14.Text = $"Изменены певая и последняя буквы: {str1}";
         }
 
-        private void button8_Click(object sender, EventArgs e)
+      private void button8_Click(object sender, EventArgs e)
         {
-            string s = textBox1.Text;
+           /* string s = textBox1.Text;
             string n = Str.OddLetter(s);
-            label14.Text = $"{n}";
+            label14.Text = $"{n}";*/
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -155,5 +155,34 @@ namespace ISMStr_Form
                 match = match.NextMatch();
             }
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            Reg.FindEmail(s, out Match m);
+            while (m.Success)
+            {
+                if (m.Success)
+                {
+                    label30.Text = $"Найдено: {m.Value}";
+                }
+                m = m.NextMatch();
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            Reg.FindIPv4(s, out Match m);
+            while (m.Success)
+            {
+                if (m.Success)
+                {
+                    label32.Text = ("Ряд - адрес IPv4");
+                }
+                else label32.Text = ("Ряд не является адресом IPv4");
+            }
+        }
     }
+    
 }

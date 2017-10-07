@@ -44,6 +44,25 @@ namespace Task3
                 }
                 match = match.NextMatch();
             }
+            Reg.FindIPv4(s, out Match mth);
+            while (mth.Success)
+            {
+                if (mth.Success)
+                {
+                    Console.WriteLine("Ряд - адрес IPv4");
+                }
+                else Console.WriteLine("Ряд не является адресом IPv4");
+            }
+            Reg.FindEmail(s, out Match mtch);
+            while (mtch.Success)
+            {
+                if (mtch.Success)
+                {
+                    Console.WriteLine("Найденные e-mail адреса");
+                    Console.WriteLine($"Найдено: {mtch.Value}");
+                }
+                match = match.NextMatch();
+            }
         }
     }
 }

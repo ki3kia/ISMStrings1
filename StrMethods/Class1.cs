@@ -112,7 +112,7 @@ namespace StrMethods
                 str = str + " " + n;
             }
         }
-        public static string OddLetter(string s)
+      /*  public static string OddLetter(string s)
         {
             char[] a = { ' ', '(', ')', ',', '.' };
             string n = null;
@@ -139,7 +139,7 @@ namespace StrMethods
                     n += k;
             }
             return n;
-        }
+        }*/
     }
     public class Reg
     {
@@ -169,6 +169,16 @@ namespace StrMethods
             match = regex.Match(s);
             Regex reg = new Regex(@"\b(198[4-9]|199\d|20[01]\d|202[0-5])\b");
             mat = reg.Match(s);
+        }
+        public static void FindIPv4(string s, out Match match)
+        {
+            Regex regex = new Regex(@"^([01]\d{2})\.([01]\d{2})\.([01]\d{2})\.([01]\d{2})|(2[0-5]{2})\.(2[0-5]{2})\.(2[0-5]{2})\.(2[0-5]{2})|([01]\d{2})\.(2[0-5]{2})\.(2[0-5]{2})\.(2[0-5]{2})|([01]\d{2})\.([01]\d{2})\.(2[0-5]{2})\.(2[0-5]{2})|([01]\d{2})\.([01]\d{2})\.([01]\d{2})\.(2[0-5]{2})|(2[0-5]{2})([01]\d{2})\.([01]\d{2})\.([01]\d{2})|(2[0-5]{2})\.(2[0-5]{2})\.([01]\d{2})\.([01]\d{2})|(2[0-5]{2})\.(2[0-5]{2})\.(2[0-5]{2})\.([01]\d{2})|([01]\d{2})\.(2[0-5]{2})\.([01]\d{2})\.(2[0-5]{2})|(2[0-5]{2})\.([01]\d{2})\.(2[0-5]{2})\.([01]\d{2})$");
+            match = regex.Match(s);
+        }
+        public static void FindEmail(string s, out Match match)
+        {
+            Regex regex = new Regex(@"\w+\W*\@\w+\.\w+\W*\w*");
+            match = regex.Match(s);
         }
     }
 }

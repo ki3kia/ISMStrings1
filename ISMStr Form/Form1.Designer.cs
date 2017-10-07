@@ -70,6 +70,12 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -477,13 +483,77 @@
             this.label28.Size = new System.Drawing.Size(0, 13);
             this.label28.TabIndex = 39;
             // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button14.Location = new System.Drawing.Point(698, 369);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 33);
+            this.button14.TabIndex = 44;
+            this.button14.Text = "Найти";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(556, 369);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(74, 15);
+            this.label29.TabIndex = 43;
+            this.label29.Text = "Найти e-mail";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(799, 379);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 13);
+            this.label30.TabIndex = 42;
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button15.Location = new System.Drawing.Point(698, 449);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 33);
+            this.button15.TabIndex = 47;
+            this.button15.Text = "Проверить";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(556, 449);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(136, 30);
+            this.label31.TabIndex = 46;
+            this.label31.Text = "Проверить является\r\n ли строка адресомIPv4";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(799, 459);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(0, 13);
+            this.label32.TabIndex = 45;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(930, 482);
+            this.ClientSize = new System.Drawing.Size(1001, 482);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label28);
@@ -578,6 +648,12 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
     }
 }
 
